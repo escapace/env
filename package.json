@@ -1,0 +1,537 @@
+{
+  "name": "@escapace/env",
+  "description": "",
+  "version": "0.0.0",
+  "author": {
+    "name": "escapace",
+    "email": "opensource@escapace.com"
+  },
+  "bugs": "https://github.com/escapace/env/issues",
+  "devDependencies": {
+    "@commitlint/cli": "19.7.1",
+    "@commitlint/config-conventional": "19.7.1",
+    "@escapace/env": "link:",
+    "@escapace/pnpm-pack": "0.5.4",
+    "@ls-lint/ls-lint": "2.2.3",
+    "@types/lodash-es": "4.17.12",
+    "@vitest/coverage-v8": "3.0.5",
+    "eslint": "9.20.1",
+    "eslint-config-escapace": "5.4.5",
+    "esroll": "0.4.0",
+    "knip": "5.43.6",
+    "lefthook": "1.10.10",
+    "lodash-es": "4.17.21",
+    "mlly": "1.7.4",
+    "prettier": "3.4.2",
+    "prettier-config-escapace": "1.2.1",
+    "syncpack": "13.0.2",
+    "tsx": "4.19.2",
+    "typescript": "5.7.3",
+    "vitest": "3.0.5"
+  },
+  "engines": {
+    "pnpm": ">=9.15.4"
+  },
+  "exports": {
+    "development": {
+      "edge-routine": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development-edge-routine.js"
+        }
+      },
+      "azion": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development-azion.js"
+        }
+      },
+      "workerd": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development-workerd.js"
+        }
+      },
+      "deno": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development-deno.js"
+        }
+      },
+      "lagon": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development-lagon.js"
+        }
+      },
+      "react-native": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development-react-native.js"
+        }
+      },
+      "moddable": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development-moddable.js"
+        }
+      },
+      "netlify": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development-netlify.js"
+        }
+      },
+      "electron": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development-electron.js"
+        }
+      },
+      "node": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development-node.js"
+        }
+      },
+      "bun": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development-bun.js"
+        }
+      },
+      "react-server": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development-react-server.js"
+        }
+      },
+      "edge-light": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development-edge-light.js"
+        }
+      },
+      "fastly": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development-fastly.js"
+        }
+      },
+      "kiesel": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development-kiesel.js"
+        }
+      },
+      "wasmer": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development-wasmer.js"
+        }
+      },
+      "browser": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development-browser.js"
+        }
+      },
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/development.js"
+        }
+      }
+    },
+    "production": {
+      "edge-routine": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production-edge-routine.js"
+        }
+      },
+      "azion": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production-azion.js"
+        }
+      },
+      "workerd": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production-workerd.js"
+        }
+      },
+      "deno": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production-deno.js"
+        }
+      },
+      "lagon": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production-lagon.js"
+        }
+      },
+      "react-native": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production-react-native.js"
+        }
+      },
+      "moddable": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production-moddable.js"
+        }
+      },
+      "netlify": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production-netlify.js"
+        }
+      },
+      "electron": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production-electron.js"
+        }
+      },
+      "node": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production-node.js"
+        }
+      },
+      "bun": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production-bun.js"
+        }
+      },
+      "react-server": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production-react-server.js"
+        }
+      },
+      "edge-light": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production-edge-light.js"
+        }
+      },
+      "fastly": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production-fastly.js"
+        }
+      },
+      "kiesel": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production-kiesel.js"
+        }
+      },
+      "wasmer": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production-wasmer.js"
+        }
+      },
+      "browser": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production-browser.js"
+        }
+      },
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/production.js"
+        }
+      }
+    },
+    "staging": {
+      "edge-routine": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging-edge-routine.js"
+        }
+      },
+      "azion": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging-azion.js"
+        }
+      },
+      "workerd": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging-workerd.js"
+        }
+      },
+      "deno": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging-deno.js"
+        }
+      },
+      "lagon": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging-lagon.js"
+        }
+      },
+      "react-native": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging-react-native.js"
+        }
+      },
+      "moddable": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging-moddable.js"
+        }
+      },
+      "netlify": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging-netlify.js"
+        }
+      },
+      "electron": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging-electron.js"
+        }
+      },
+      "node": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging-node.js"
+        }
+      },
+      "bun": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging-bun.js"
+        }
+      },
+      "react-server": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging-react-server.js"
+        }
+      },
+      "edge-light": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging-edge-light.js"
+        }
+      },
+      "fastly": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging-fastly.js"
+        }
+      },
+      "kiesel": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging-kiesel.js"
+        }
+      },
+      "wasmer": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging-wasmer.js"
+        }
+      },
+      "browser": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging-browser.js"
+        }
+      },
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/staging.js"
+        }
+      }
+    },
+    "edge-routine": {
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/edge-routine.js"
+        }
+      }
+    },
+    "azion": {
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/azion.js"
+        }
+      }
+    },
+    "workerd": {
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/workerd.js"
+        }
+      }
+    },
+    "deno": {
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/deno.js"
+        }
+      }
+    },
+    "lagon": {
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/lagon.js"
+        }
+      }
+    },
+    "react-native": {
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/react-native.js"
+        }
+      }
+    },
+    "moddable": {
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/moddable.js"
+        }
+      }
+    },
+    "netlify": {
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/netlify.js"
+        }
+      }
+    },
+    "electron": {
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/electron.js"
+        }
+      }
+    },
+    "node": {
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/node.js"
+        }
+      }
+    },
+    "bun": {
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/bun.js"
+        }
+      }
+    },
+    "react-server": {
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/react-server.js"
+        }
+      }
+    },
+    "edge-light": {
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/edge-light.js"
+        }
+      }
+    },
+    "fastly": {
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/fastly.js"
+        }
+      }
+    },
+    "kiesel": {
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/kiesel.js"
+        }
+      }
+    },
+    "wasmer": {
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/wasmer.js"
+        }
+      }
+    },
+    "browser": {
+      "default": {
+        "import": {
+          "types": "./lib/types/index.d.ts",
+          "default": "./lib/neutral/browser.js"
+        }
+      }
+    },
+    "default": {
+      "import": {
+        "types": "./lib/types/index.d.ts",
+        "default": "./lib/neutral/index.js"
+      }
+    }
+  },
+  "files": [
+    "lib/neutral",
+    "lib/types"
+  ],
+  "homepage": "https://github.com/escapace/env#readme",
+  "license": "MPL-2.0",
+  "module": "lib/neutral/index.js",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": "escapace/env",
+  "scripts": {
+    "codegen": "tsx scripts/codegen.ts",
+    "build": "pnpm run codegen && tsx scripts/build.ts",
+    "format": "eslint --no-warn-ignored --fix && prettier -uw .",
+    "lint": "ls-lint --config .ls-lint.yaml && knip --no-config-hints && eslint",
+    "ls-lint": "ls-lint --config .ls-lint.yaml",
+    "pack": "pnpm-pack package --pack-destination lib",
+    "prepare": "lefthook install",
+    "syncpack": "syncpack fix-mismatches && syncpack set-semver-ranges",
+    "test": "vitest --no-watch --coverage",
+    "typecheck": "tsc --noEmit"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "types": "lib/types/index.d.ts"
+}
