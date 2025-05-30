@@ -38,6 +38,6 @@ if (environment === "production") {
 
 ## How Import Conditions Work
 
-This package uses [Node.js ESM import conditions](https://nodejs.org/api/packages.html#conditional-exports) to provide the correct `runtime` and `environment` values for the current execution context. The import conditions are defined in this repository’s [`package.json`](./package.json) in the `exports` field.
+This package uses [ESM import conditions](https://nodejs.org/api/packages.html#conditional-exports) to provide the correct `runtime` and `environment` values for the current execution context. The import conditions are defined in this repository’s [`package.json`](./package.json) in the `exports` field.
 
 When your code is executed or bundled, Node.js or a compatible runtime uses these conditions to select the right file, so the correct constants are exported for each environment. The set of possible `runtime` values follows the [Runtime Keys proposal](https://runtime-keys.proposal.wintercg.org/), which provides a standardized way for runtimes like Node.js, Deno, Bun, and various edge platforms to identify themselves, making portable and interoperable code easier to write.
