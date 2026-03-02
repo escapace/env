@@ -24,7 +24,7 @@
     "mlly": "1.7.4",
     "prettier": "3.5.3",
     "prettier-config-escapace": "1.2.2",
-    "syncpack": "13.0.4",
+    "syncpack": "14.0.0",
     "tsx": "4.19.4",
     "typescript": "5.9.3",
     "vitest": "3.1.4"
