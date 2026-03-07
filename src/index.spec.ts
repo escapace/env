@@ -47,7 +47,7 @@ describe('env', () => {
     }
   })
 
-  it('...', { timeout: 3000 }, async () => {
+  it('....', { timeout: 3000 }, async () => {
     for (const combination of combinations) {
       const { environment, runtime } = await run(
         ['import', combination.environment, combination.runtime].filter(

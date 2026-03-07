@@ -1,4 +1,4 @@
-import { assign, isPlainObject, kebabCase, merge, orderBy } from 'lodash-es'
+import { assign, isPlainObject, kebabCase, merge, orderBy } from 'es-toolkit/compat'
 import { exec as _exec } from 'node:child_process'
 import { readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
@@ -108,7 +108,7 @@ export const environment: undefined | ${environments
     )
 
     await exec(`pnpm exec prettier --write ${file}`)
-    await exec(`pnpm exec eslint --fix ${file}`)
+    // await exec(`pnpm exec eslint --fix ${file}`)
   }),
 )
 
@@ -128,7 +128,7 @@ await writeFile(
 )
 
 await exec(`pnpm exec prettier --write ${pathFileConstants}`)
-await exec(`pnpm exec eslint --fix ${pathFileConstants}`)
+// await exec(`pnpm exec eslint --fix ${pathFileConstants}`)
 
 const pathFilePackageJSON = path.resolve(__dirname, '..', 'package.json')
 
@@ -142,4 +142,4 @@ await writeFile(
 )
 
 await exec(`pnpm exec prettier --write ${pathFilePackageJSON}`)
-await exec(`pnpm exec eslint --fix ${pathFilePackageJSON}`)
+// await exec(`pnpm exec eslint --fix ${pathFilePackageJSON}`)

@@ -11,13 +11,13 @@ pnpm add @escapace/env
 ## Usage
 
 ```ts
-import { runtime, environment } from "@escapace/env";
+import { runtime, environment } from '@escapace/env'
 
-if (runtime === "node") {
+if (runtime === 'node') {
   // Node.js-specific logic
 }
 
-if (environment === "production") {
+if (environment === 'production') {
   // Production-specific logic
 }
 ```
@@ -26,11 +26,13 @@ if (environment === "production") {
 
 - **runtime**:  
   A string identifying the current execution runtime. Possible values include:
+
   ```
-  'azion' | 'browser' | 'bun' | 'deno' | 'edge-light' | 'edge-routine' | 
-  'electron' | 'fastly' | 'kiesel' | 'lagon' | 'moddable' | 'netlify' | 
+  'azion' | 'browser' | 'bun' | 'deno' | 'edge-light' | 'edge-routine' |
+  'electron' | 'fastly' | 'kiesel' | 'lagon' | 'moddable' | 'netlify' |
   'node' | 'react-native' | 'react-server' | 'wasmer' | 'workerd' | undefined
   ```
+
   These values are from the [Runtime Keys proposal](https://runtime-keys.proposal.wintercg.org/), which aims to standardize how JavaScript environments identify themselves.
 
 - **environment**:  

@@ -1,7 +1,7 @@
 {
   "builds": {
     "neutral": {
-      "define": { "__PLATFORM__": "\"neutral\"" },
+      "define": { "__ENVIRONMENT__": "\"production\"", "__PLATFORM__": "\"neutral\"" },
       "entryPoints": [
         "src/development-edge-routine.ts",
         "src/development-azion.ts",
@@ -81,5 +81,11 @@
       "platform": "neutral",
       "target": ["es2020"]
     }
+  },
+  "declaration": {
+    "declarationRollup": false,
+    "documentation": false,
+    "entryPoints": ["src/index.ts"],
+    "tsconfig": "tsconfig-build.json"
   }
 }
