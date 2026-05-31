@@ -12,7 +12,7 @@
     "@commitlint/config-conventional": "21.0.1",
     "@escapace/env": "link:",
     "@escapace/pnpm-pack": "0.9.0",
-    "@escapace/syncpack-configuration": "0.2.0",
+    "@escapace/syncpack-configuration": "0.3.0",
     "@ls-lint/ls-lint": "2.3.1",
     "@types/node": "24.12.4",
     "@vitest/coverage-v8": "4.1.6",
